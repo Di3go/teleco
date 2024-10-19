@@ -1,0 +1,269 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos del header */
+header {
+    background-color: #f8f9fa; /* Color de fondo del header */
+    padding: 10px 0; /* Espaciado superior e inferior del header */
+    border-bottom: 2px solid #ddd; /* Línea debajo del header */
+}
+
+/* Contenedor para centrar el contenido */
+.container-fluid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Logo */
+.navbar-brand img {
+    max-width: 120px; /* Ajusta el tamaño del logo */
+    height: auto;
+}
+
+/* Estilos del menú */
+.navbar-nav {
+    display: flex;
+    justify-content: flex-end; /* Alinea el menú a la derecha */
+    list-style-type: none; /* Elimina el estilo por defecto de lista */
+}
+
+.navbar-nav .nav-item {
+    margin-left: 20px; /* Espacio entre los elementos del menú */
+}
+
+.navbar-nav .nav-link {
+    font-size: 16px;
+    font-weight: bold;
+    color: #343a40; /* Color de los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    padding: 5px 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efecto hover en los enlaces del menú */
+.navbar-nav .nav-link:hover {
+    color: #007bff; /* Cambia el color al pasar el mouse */
+    background-color: #e9ecef; /* Fondo del enlace al pasar el mouse */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column; /* Apilar el menú en pantallas pequeñas */
+        align-items: flex-start; /* Alinear los enlaces al inicio */
+    }
+
+    .navbar-nav .nav-item {
+        margin-left: 0;
+        margin-bottom: 10px; /* Espaciado entre los elementos en pantallas pequeñas */
+    }
+}
+/* Estilos generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilos para la sección Hero */
+.hero {
+    background-image: url('background-hero.jpg'); /* Fondo con imagen (puedes cambiar el enlace a la imagen que desees) */
+    background-size: cover; /* La imagen cubre toda la sección */
+    background-position: center; /* Centrar la imagen de fondo */
+    padding: 150px 20px; /* Espaciado grande en la parte superior e inferior */
+    text-align: center; /* Centrar el texto */
+    color: #fff; /* Texto blanco */
+    position: relative; /* Para manejar elementos flotantes */
+    z-index: 1;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Capa semitransparente para mejorar la legibilidad */
+    z-index: -1; /* Colocar la capa detrás del contenido */
+}
+
+/* Estilos para el título h1 en la sección Hero */
+.hero h1 {
+    font-size: 4rem; /* Tamaño grande para destacar el título */
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2; /* Ajuste de la altura de línea */
+}
+
+/* Estilos para la descripción en la sección Hero */
+.hero p {
+    font-size: 1.5rem; /* Tamaño de fuente más grande para visibilidad */
+    margin-bottom: 30px; /* Espaciado entre el texto y el botón */
+    color: #f8f9fa; /* Color de texto para resaltar sobre el fondo oscuro */
+    line-height: 1.6; /* Mejora la legibilidad */
+}
+
+/* Estilos del botón de llamada a la acción en la sección Hero */
+.hero a.cta-button {
+    font-size: 1.5rem; /* Tamaño del texto del botón */
+    padding: 15px 30px; /* Aumenta el tamaño del botón */
+    background-color: #ff7f50; /* Color del botón (naranja coral) */
+    color: #fff; /* Texto blanco */
+    text-decoration: none; /* Elimina el subrayado */
+    border-radius: 50px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block; /* Asegura que el botón se comporte como un bloque */
+}
+
+/* Efecto hover para el botón */
+.hero a.cta-button:hover {
+    background-color: #ff5722; /* Color más oscuro al pasar el ratón */
+    transform: translateY(-3px); /* Efecto de "flotación" al pasar el ratón */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .hero {
+        padding: 100px 20px; /* Reduce el padding en pantallas más pequeñas */
+    }
+
+    .hero h1 {
+        font-size: 2.5rem; /* Ajusta el tamaño del título en dispositivos móviles */
+    }
+
+    .hero p {
+        font-size: 1.2rem; /* Ajusta el tamaño de la descripción en dispositivos móviles */
+    }
+
+    .hero a.cta-button {
+        font-size: 1.2rem; /* Reduce el tamaño del botón en pantallas más pequeñas */
+        padding: 10px 20px; /* Ajusta el padding del botón */
+    }
+}
+/* Estilos generales para la sección con dos columnas */
+.two-columns-section {
+    padding: 60px 20px; /* Espaciado alrededor de la sección */
+    background-color: #f7f7f7; /* Fondo suave */
+}
+
+/* Estilos para las columnas */
+.two-columns-section .col-md-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para el contenedor de la imagen (Primera columna) */
+.image-container img {
+    max-width: 100%; /* Imagen responsiva para que se ajuste al contenedor */
+    height: auto; /* Mantiene las proporciones de la imagen */
+    border-radius: 10px; /* Bordes redondeados para un efecto visual suave */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera debajo de la imagen */
+}
+
+/* Estilos para la segunda columna (Texto y enlace) */
+.two-columns-section h2 {
+    font-size: 2.5rem; /* Tamaño grande del título */
+    font-weight: bold;
+    color: #343a40; /* Color oscuro del título */
+    margin-bottom: 20px; /* Espaciado inferior */
+    line-height: 1.2; /* Ajuste de la altura de línea para el título */
+}
+
+.two-columns-section p {
+    font-size: 1.2rem; /* Tamaño de la fuente adecuado para lectura */
+    color: #6c757d; /* Color gris suave para el texto */
+    margin-bottom: 20px; /* Espaciado inferior entre párrafos */
+    line-height: 1.6; /* Aumenta el espacio entre líneas para mejor legibilidad */
+}
+
+/* Estilos del enlace (Llamada a la acción) */
+.two-columns-section a.services-link {
+    font-size: 1.2rem; /* Tamaño del texto del enlace */
+    color: #007bff; /* Color azul del enlace */
+    text-decoration: none; /* Elimina el subrayado por defecto */
+    font-weight: bold; /* Texto en negrita */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Transición suave al interactuar */
+}
+
+.two-columns-section a.services-link:hover {
+    color: #0056b3; /* Color azul más oscuro al pasar el ratón */
+    text-decoration: underline; /* Subraya el enlace al pasar el ratón */
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .two-columns-section {
+        padding: 40px 10px; /* Reduce el padding en pantallas pequeñas */
+    }
+
+    .two-columns-section .col-md-6 {
+        margin-bottom: 20px; /* Espaciado inferior entre las columnas cuando se apilan */
+    }
+
+    .two-columns-section h2 {
+        font-size: 2rem; /* Ajuste del tamaño del título en pantallas pequeñas */
+    }
+
+    .two-columns-section p {
+        font-size: 1.1rem; /* Reduce ligeramente el tamaño del texto */
+    }
+
+    .image-container img {
+        border-radius: 5px; /* Reduce el redondeo de los bordes en pantallas más pequeñas */
+    }
+}
+/* Estilos para la sección de la galería */
+.gallery-section {
+    padding: 60px 20px; /* Espaciado alrededor de la sección */
+    background-color: #f8f9fa; /* Fondo claro para la sección */
+}
+
+.gallery-section h2 {
+    text-align: center; /* Centrar el título de la galería */
+    margin-bottom: 40px; /* Espaciado inferior */
+    font-size: 2.5rem; /* Tamaño grande para el título */
+    color: #343a40; /* Color oscuro del título */
+}
+
+/* Estilos para los contenedores de las imágenes */
+.gallery-item {
+    margin-bottom: 30px; /* Espaciado inferior entre las imágenes */
+}
+
+/* Estilos para las imágenes de la galería */
+.gallery-item img {
+    width: 100%; /* Imágenes ocupan el ancho completo de su contenedor */
+    height: auto; /* Mantener proporciones */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera debajo de las imágenes */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto suave de transición */
+}
+
+/* Efecto hover para las imágenes */
+.gallery-item img:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más profunda cuando se pasa el ratón */
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .gallery-section {
+        padding: 40px 10px; /* Reduce el espaciado en pantallas pequeñas */
+    }
+
+    .gallery-section h2 {
+        font-size: 2rem; /* Ajusta el tamaño del título para pantallas móviles */
+    }
+
+    .gallery-item {
+        margin-bottom: 20px; /* Menos espaciado entre las imágenes en dispositivos móviles */
+    }
+}
